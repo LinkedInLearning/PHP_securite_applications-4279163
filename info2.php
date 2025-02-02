@@ -1,6 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+$array = [
+    'nom' => 'Looper',
+    'prenom' => 'Dev'
+];
 
-include 'info.php';
+var_dump($array);
