@@ -11,8 +11,20 @@ if (!isset($_SESSION['balance'])) {
     $_SESSION['balance'] = 5000; // 5000€ de départ
 }
 
-// Vérifie si un transfert est effectué
+$_SESSION['balance'] = 5000;
+// Génération du token CSRF
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Vérification CSRF avant transfert
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("<h2 style='color: red;'>🚨 Attaque CSRF détectée !</h2>");
+    }
+    $_SESSION['balance'] -= (int) $_POST['amount'];
+    echo "<h2 style='color: green;'>✅ Transfert sécurisé !</h2>";
+
     $amount = (int) $_POST['amount'];
     $recipient = htmlspecialchars($_POST['recipient']);
 
@@ -47,6 +59,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>👤 Bénéficiaire : </label>
         <input type="text" name="recipient" value="ami@example.com"><br>
         <button type="submit">💸 Envoyer</button>
+
+        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
     </form>
 </body>
 
