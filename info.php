@@ -14,7 +14,7 @@
     <br>
 
     <?php
-    $name = $_GET['name'];
+    $name = htmlspecialchars($_GET['name']);
     echo 'Bonjour ' . $name;
     ?>
 
