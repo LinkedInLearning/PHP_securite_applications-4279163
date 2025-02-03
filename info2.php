@@ -1,8 +1,5 @@
 <?php
+echo "Bienvenue sur la page numéro 2 <br>";
+echo "Vous avez envoyé le message : <br>";
 
-$array = [
-    'nom' => 'Looper',
-    'prenom' => 'Dev'
-];
-
-var_dump($array);
+echo htmlspecialchars($_POST["message"]);
