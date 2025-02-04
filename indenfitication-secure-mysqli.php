@@ -9,8 +9,8 @@ $conn = new mysqli($servername, $username, $password, $database);
 
 if (isset($_POST['loginUser']) && isset($_POST['passwordUser'])) {
 
-    $loginUser = $_POST['loginUser'];
-    $passwordUser = $_POST['passwordUser'];
+    $loginUser = mysqli_real_escape_string($conn, $_POST['loginUser']);
+    $passwordUser = mysqli_real_escape_string($conn, $_POST['passwordUser']);
 
     $sql = "SELECT * FROM user WHERE login = '$loginUser' and password = '$passwordUser' ";
 
