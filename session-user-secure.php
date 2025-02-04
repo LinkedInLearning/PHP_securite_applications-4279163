@@ -47,12 +47,13 @@ if (isset($_SESSION['last_activity']) && ($current_time - $_SESSION['last_activi
 $_SESSION['last_activity'] = $current_time;
 
 
+
 /*
  *   UTILISER DES COOKIES SECURISES
  */
 
-ini_set('session.cookie_httponly', 1); // Empêche l'accès au cookie via JavaScript
 ini_set('session.cookie_secure', 1); // Transmission du cookie uniquement via HTTPS
+ini_set('session.cookie_httponly', 1); // Empêche l'accès au cookie via JavaScript
 ini_set('session.use_only_cookies', 1); // Empêche l'utilisation de session_id dans l'URL
 
 
