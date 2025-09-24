@@ -6,6 +6,8 @@ Ce dossier Repository est lié au cours `PHP : La sécurité des applications`. 
 
 Vous êtes développeur PHP et souhaitez sécuriser vos applications ? Cette formation animée par Maheva Dessart vous apprendra à protéger vos projets contre les principales menaces comme les failles XSS, les injections SQL, les attaques CSRF et le vol de sessions. Vous découvrirez les bases de la sécurité en PHP, de l’accès à la configuration PHP à l’utilisation de Xdebug pour déboguer. Apprenez à sécuriser vos formulaires, vos sessions, et vos cookies, à utiliser PDO pour sécuriser vos requêtes SQL et à hasher les mots de passe avec des algorithmes comme bcrypt. Vous explorerez également des outils d’optimisation et de sécurité comme Blackfire et PHP-FPM. Cette formation vous guidera pour mettre en place une stratégie de défense en profondeur et appliquer des bonnes pratiques de développement pour rendre vos applications robustes et durables.
 
+La meilleure façon d'apprendre un langage est de l'utiliser dans la pratique. C'est pourquoi ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. 
+
 ## Instructions
 
 Ce dossier Repository a des branches pour chacune des vidéos du cours. Vous pouvez utiliser le menu des Branches sur GitHub afin d’accéder aux passages qui vous intéressent. Vous pouvez également rajouter `/tree/BRANCH_NAME` à l’URL afin d’accéder à la branche qui vous intéresse. 
